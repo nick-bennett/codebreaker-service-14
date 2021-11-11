@@ -47,7 +47,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         .authorizeRequests((auth) ->
             auth
                 .anyRequest()
-                .anonymous())
+                .authenticated())
         .oauth2ResourceServer()
         .jwt()
         .jwtAuthenticationConverter(converter);
