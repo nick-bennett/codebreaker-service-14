@@ -3,7 +3,6 @@ package edu.cnm.deepdive.codebreaker.view;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-import edu.cnm.deepdive.codebreaker.service.UUIDStringifier;
 import java.io.IOException;
 import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;

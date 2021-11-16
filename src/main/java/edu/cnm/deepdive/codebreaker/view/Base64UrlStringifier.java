@@ -13,9 +13,10 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package edu.cnm.deepdive.codebreaker.service;
+package edu.cnm.deepdive.codebreaker.view;
 
 import java.nio.ByteBuffer;
+import java.util.Base64;
 import java.util.Base64.Decoder;
 import java.util.Base64.Encoder;
 import java.util.UUID;
@@ -28,13 +29,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class Base64UrlStringifier implements UUIDStringifier {
 
-  private final Encoder encoder;
-  private final Decoder decoder;
-
-  public Base64UrlStringifier(Encoder encoder, Decoder decoder) {
-    this.encoder = encoder;
-    this.decoder = decoder;
-  }
+  private final Encoder encoder = Base64.getUrlEncoder().withoutPadding();
+  private final Decoder decoder = Base64.getUrlDecoder();
 
   /**
    * Constructs and returns a base64url representation of the 128 bits in the {@link UUID} {@code

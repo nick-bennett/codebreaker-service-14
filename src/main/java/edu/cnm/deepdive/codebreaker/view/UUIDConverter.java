@@ -1,6 +1,5 @@
 package edu.cnm.deepdive.codebreaker.view;
 
-import edu.cnm.deepdive.codebreaker.service.UUIDStringifier;
 import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;

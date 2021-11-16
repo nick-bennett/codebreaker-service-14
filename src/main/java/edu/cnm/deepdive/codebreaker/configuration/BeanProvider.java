@@ -17,14 +17,4 @@ public class BeanProvider {
     return new JDKRandomBridge(RandomSource.XO_RO_SHI_RO_128_PP, null);
   }
 
-  @Bean
-  public Encoder getBase64Encoder() {
-    return Base64.getUrlEncoder().withoutPadding();
-  }
-
-  @Bean
-  public Decoder getBase64Decoder() {
-    return Base64.getUrlDecoder();
-  }
-
 }
