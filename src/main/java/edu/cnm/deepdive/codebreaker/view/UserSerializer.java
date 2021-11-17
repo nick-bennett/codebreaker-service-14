@@ -5,18 +5,15 @@ import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import edu.cnm.deepdive.codebreaker.model.entity.User;
 import java.io.IOException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jackson.JsonComponent;
 
 @JsonComponent
 public class UserSerializer extends JsonSerializer<User> {
 
   @Override
-  public void serialize(User user, JsonGenerator jsonGenerator, SerializerProvider serializerProvider)
-      throws IOException {
-    if (user.getExternalKey() != null) {
+  public void serialize(User user, JsonGenerator jsonGenerator,
+      SerializerProvider serializerProvider) throws IOException {
 
-    }
   }
 
 }
