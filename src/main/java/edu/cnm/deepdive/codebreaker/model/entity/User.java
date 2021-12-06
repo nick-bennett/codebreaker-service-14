@@ -64,6 +64,10 @@ public class User {
   @JsonIgnore
   private final List<Game> games = new LinkedList<>();
 
+  /**
+   * Returns the primary key identifier of this instance.
+   * @return
+   */
   public UUID getId() {
     return id;
   }
@@ -80,6 +84,12 @@ public class User {
     return oauthKey;
   }
 
+  /**
+   * Assigns a unique value to the oauthKey field. This will be obtained from the bearer token
+   * provided by the user when this instance is created.
+   *
+   * @param oauthKey
+   */
   public void setOauthKey(String oauthKey) {
     this.oauthKey = oauthKey;
   }
